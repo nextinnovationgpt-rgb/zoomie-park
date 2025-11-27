@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoomie Park - 24時間営業の屋内ドッグラン＆ラウンジ | 奈良県上牧町</title>
+    <meta name="description" content="奈良県上牧町初の24時間営業・日中はスタッフ在中、夜間は無人運営の屋内ドッグラン＆ラウンジ。天候に左右されない空調完備の施設で、愛犬と飼い主様がゆったり過ごせるウェルネス拠点">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-noto">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-pink-400 to-rose-500 rounded-full flex items-center justify-center">
+                        <i class="fas fa-dog text-white text-xl"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold text-gray-800">Zoomie Park</h1>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link">施設概要</a>
+                    <a href="#facility-features" class="nav-link">施設機能</a>
+                    <a href="#pricing" class="nav-link">料金体系</a>
+                    <a href="#recommendations" class="nav-link">おすすめ</a>
+                    <a href="#hygiene" class="nav-link">衛生管理</a>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#about" class="nav-link py-2">施設概要</a>
+                    <a href="#facility-features" class="nav-link py-2">施設機能</a>
+                    <a href="#pricing" class="nav-link py-2">料金体系</a>
+                    <a href="#recommendations" class="nav-link py-2">おすすめ</a>
+                    <a href="#hygiene" class="nav-link py-2">衛生管理</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 relative overflow-hidden min-h-[70vh]" style="height: 600px;">
+        <!-- Background Video -->
+        <div class="absolute inset-0 z-0">
+            <video autoplay muted loop class="w-full h-full object-cover">
+                <source src="videos/dog-running-header.mp4" type="video/mp4">
+                <img src="images/running-dog-header.jpg" alt="走っている元気な犬" class="w-full h-full object-cover">
+            </video>
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                    愛犬の"走り回りたい"本能を、24時間いつでも満たせる場所
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-8">Zoomie Park</h2>
+            </div>
+            </div>
+        </div>
+        
+        <!-- Floating elements -->
+        <div class="absolute top-1/4 left-4 animate-bounce z-10">
+            <div class="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                <i class="fas fa-bone text-gray-700 text-2xl"></i>
+            </div>
+        </div>
+        <div class="absolute top-1/3 right-8 animate-pulse z-10">
+            <div class="w-12 h-12 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                <i class="fas fa-heart text-gray-700 text-xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">どんな施設？</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 md:p-12 mb-12">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+                            Zoomie Parkは、奈良県北葛城郡上牧町に誕生した、地域初の「24時間営業・日中はスタッフ在中、夜間は無人運営」の屋内ドッグラン＆ラウンジです。
+                        </h3>
+                    </div>
+                    
+                    <div class="max-w-4xl mx-auto space-y-6">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            年々厳しさを増す夏の暑さや、変わりゆく空模様。そして、共働きや在宅ワークといったライフスタイルの変化。
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            「思い切り走らせてあげたいけれど、場所がない」「仕事が終わる頃には、もう外は暗い」
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            そんな、愛犬を想うがゆえの葛藤を抱える飼い主様が増えています。
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            だからこそ、ここは単なるドッグランではありません。天候や時間を忘れ、愛犬は本能のままに駆け回り、飼い主様はラウンジで自分だけの時間を慈しむ。
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                            そんな「愛犬と人の、新しい幸せのカタチ」を、ここ奈良・上牧町からお届けします。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4">「Zoomies（ズーミーズ）」とは？</h4>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            犬が喜びのあまりスイッチが入ったように爆走する行動のこと。天候や気温、時間を気にせず、愛犬がその本能を解放できる安全なフィールドと、飼い主様がカフェのようにくつろげるラウンジを融合させた、<strong class="text-blue-600">「犬と人のためのウェルネス拠点」</strong>です。
+                        </p>
+                        <div class="flex items-center space-x-4 text-sm text-gray-500">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i>奈良県北葛城郡上牧町</span>
+                            <span><i class="fas fa-clock mr-1"></i>24時間営業（9:00-20:00スタッフ在中）</span>
+                            <span><i class="fas fa-shield-alt mr-1"></i>夜間は無人運営</span>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-8 text-center">
+                        <div class="w-32 h-32 bg-white rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
+                            <i class="fas fa-dog text-6xl text-blue-600"></i>
+                        </div>
+                        <h5 class="text-xl font-bold text-gray-800 mb-2">愛犬のストレス解消</h5>
+                        <p class="text-gray-600">安全な環境で思い切り走らせてあげましょう</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gradient-to-br from-rose-25 to-pink-25">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">他のドッグランと何が違うの？</h2>
+                <p class="text-xl text-gray-600">3つの特長で、ワンちゃんも飼い主様も満足</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-8"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-cloud-sun text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">天候・気温からの解放</h3>
+                    <p class="text-gray-600 mb-6">365日快適に過ごせる空調完備の室内空間</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-green-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">真夏の猛暑も安心</h4>
+                                <p class="text-sm text-gray-600">熱中症の心配なし</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-green-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">凍える冬も快適</h4>
+                                <p class="text-sm text-gray-600">適温を保ちながら遊べる</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-green-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">こだわりの床材</h4>
+                                <p class="text-sm text-gray-600">滑りにくく、クッション性が高い</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-couch text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">飼い主様のためのラウンジ</h3>
+                    <p class="text-gray-600 mb-6">「立ちっぱなしで疲れる」という常識を変えました</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-wifi text-purple-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Wi-Fi完備</h4>
+                                <p class="text-sm text-gray-600">快適なワークスペース</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-coffee text-purple-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">カフェのようにくつろげる</h4>
+                                <p class="text-sm text-gray-600">ソファとマッサージチェア完備</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-plug text-purple-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">電源完備</h4>
+                                <p class="text-sm text-gray-600">PCで仕事もできる</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">スマート＆セキュア</h3>
+                    <p class="text-gray-600 mb-6">IT技術による無人運営で快適に</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-user-clock text-green-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">日中はスタッフ在中</h4>
+                                <p class="text-sm text-gray-600">9:00-20:00まで安心サポート</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-mobile-alt text-green-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">夜間は無人運営</h4>
+                                <p class="text-sm text-gray-600">20:00-翌8:00までスマート運営</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-video text-green-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">24時間監視システム</h4>
+                                <p class="text-sm text-gray-600">万全のセキュリティ体制</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Free Drink Section -->
+    <section id="premium-drinks" class="py-20 bg-gradient-to-br from-pink-50/30 to-rose-50/30">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <div class="w-20 h-20 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
+                        <i class="fas fa-wine-glass text-white text-3xl"></i>
+                    </div>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">会員様限定のプレミアムサービス</h2>
+                    <p class="text-xl text-gray-600 mb-8">上質で優雅なひとときを</p>
+                    <div class="w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="bg-white rounded-3xl p-8 shadow-xl">
+                        <div class="text-center mb-8">
+                            <div class="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <i class="fas fa-crown text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">会員様限定のフリードリンク</h3>
+                            <p class="text-gray-600 mb-6">特別なサービスとして、お好みのドリンクをお楽しみいただけます</p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-4 text-center">
+                                <div class="w-10 h-10 bg-amber-100 rounded-full mx-auto mb-2 flex items-center justify-center">
+                                    <i class="fas fa-glass-whiskey text-amber-600"></i>
+                                </div>
+                                <p class="text-sm font-semibold text-gray-700">コーラ</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-4 text-center">
+                                <div class="w-10 h-10 bg-orange-100 rounded-full mx-auto mb-2 flex items-center justify-center">
+                                    <i class="fas fa-coffee text-orange-600"></i>
+                                </div>
+                                <p class="text-sm font-semibold text-gray-700">コーヒー</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-4 text-center">
+                                <div class="w-10 h-10 bg-red-100 rounded-full mx-auto mb-2 flex items-center justify-center">
+                                    <i class="fas fa-glass-whiskey text-red-600"></i>
+                                </div>
+                                <p class="text-sm font-semibold text-gray-700">ジュース</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-4 text-center">
+                                <div class="w-10 h-10 bg-green-100 rounded-full mx-auto mb-2 flex items-center justify-center">
+                                    <i class="fas fa-tint text-green-600"></i>
+                                </div>
+                                <p class="text-sm font-semibold text-gray-700">天然水</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-amber-100 to-orange-100 rounded-xl p-4 text-center">
+                            <p class="text-sm text-gray-700">その他、季節のおすすめドリンクもご用意</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-8 shadow-xl">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <i class="fas fa-sofa text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">優雅なひとときを</h3>
+                            <p class="text-gray-600 mb-6">ソファでゆったりと寛ぎながら、愛犬の楽しそうに駆ける姿を眺める、心豊かな時間を</p>
+                        </div>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-check text-purple-600 text-xs"></i>
+                                </div>
+                                <p class="text-sm text-gray-700">プレミアムな空間で特別な体験を</p>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-check text-pink-600 text-xs"></i>
+                                </div>
+                                <p class="text-sm text-gray-700">マッサージチェアも無料で利用可能</p>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-check text-pink-600 text-xs"></i>
+                                </div>
+                                <p class="text-sm text-gray-700">愛犬の幸せそうな姿をゆったり鑑賞</p>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 bg-amber-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-check text-amber-600 text-xs"></i>
+                                </div>
+                                <p class="text-sm text-gray-700">上質なドリンクで優雅なひとときを</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-4 text-center">
+                            <p class="text-sm font-semibold text-gray-700">会員様限定の特別なサービス</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <div class="inline-block bg-gradient-to-r from-amber-500 to-orange-500 text-white px-8 py-4 rounded-full shadow-lg">
+                        <i class="fas fa-crown mr-2"></i>
+                        <span class="font-semibold">会員様限定の特別な空間で、上質な体験を</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gradient-to-br from-rose-25 to-pink-25">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">料金体系</h2>
+                <p class="text-xl text-gray-600">サブスクリプション型の会員制度で、よりお得にご利用いただけます</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-8"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Weekday Member -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">人気</span>
+                    </div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">平日限定会員</h3>
+                        <div class="text-4xl font-bold text-green-600 mb-2">¥4,780</div>
+                        <p class="text-gray-600 text-sm">月額（税込）</p>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-800 mb-3">対象・特徴</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span>平日日中メインの主婦層向け</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span>リモートワーカーにおすすめ</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span>月〜金 24時間利用可能</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span>フリードリンク付き</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="w-full bg-green-500 text-white py-3 rounded-xl font-semibold hover:bg-green-600 transition-colors">
+                        平日限定会員に申し込む
+                    </button>
+                </div>
+
+                <!-- Full Member -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative border-2 border-purple-300">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">おすすめ</span>
+                    </div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">全日会員</h3>
+                        <div class="text-4xl font-bold text-purple-600 mb-2">¥6,480</div>
+                        <p class="text-gray-600 text-sm">月額（税込）</p>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-800 mb-3">対象・特徴</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check text-purple-500"></i>
+                                <span>土日祝も利用したいファミリー層向け</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check text-purple-500"></i>
+                                <span>24時間・年中無休で利用可能</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check text-purple-500"></i>
+                                <span>会員限定フリードリンク付き</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="w-full bg-purple-500 text-white py-3 rounded-xl font-semibold hover:bg-purple-600 transition-colors">
+                        全日会員に申し込む
+                    </button>
+                </div>
+
+                <!-- Visitor -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">ビジター利用</h3>
+                        <div class="text-4xl font-bold text-blue-600 mb-2">¥1,500</div>
+                        <p class="text-gray-600 text-sm">1頭あたり（税込）</p>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-800 mb-3">対象・特徴</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check text-blue-500"></i>
+                                <span>お試し利用に最適</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check text-blue-500"></i>
+                                <span>遠方からの来店にも対応</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check text-blue-500"></i>
+                                <span>フリータイム制（1日利用可能）</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check text-blue-500"></i>
+                                <span>飲み物は有料</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="w-full bg-blue-500 text-white py-3 rounded-xl font-semibold hover:bg-blue-600 transition-colors">
+                        ビジターで利用する
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <div class="bg-white rounded-2xl p-6 shadow-lg max-w-2xl mx-auto">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-3">ご利用に関して</h4>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm text-gray-600">
+                        <div>
+                            <p class="font-semibold text-gray-700">営業時間</p>
+                            <p>9:00-20:00（スタッフ在中）<br>20:00-翌8:00（無人運営）</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-700">支払い方法</p>
+                            <p>クレジットカード<br>各種電子マネー対応</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facility Features Section -->
+    <section id="facility-features" class="py-20 bg-gradient-to-br from-pink-25 to-rose-25">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">施設機能</h2>
+                <p class="text-xl text-gray-600">愛犬と飼い主様のための充実した設備</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-8"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Indoor Dog Run Area -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-dog text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">屋内ドッグランエリア</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-green-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">ドッグランゾーン</h4>
+                                <p class="text-sm text-gray-600">小型、中型犬に対応した</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-green-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">アジリティ</h4>
+                                <p class="text-sm text-gray-600">滑りにくい床材採用で安全に遊べる</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lounge Area -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-couch text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">ラウンジエリア</h3>
+                    <p class="text-sm text-gray-600 mb-4">入店いただいた方すべて無料でご利用いただけます</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-pink-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">ソファ</h4>
+                                <p class="text-sm text-gray-600">ゆったりくつろげる快適なソファ</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-pink-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">マッサージチェア</h4>
+                                <p class="text-sm text-gray-600">疲れた体を癒すマッサージチェア完備</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-pink-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">ワークデスク</h4>
+                                <p class="text-sm text-gray-600">電源・Wi-Fi完備でリモートワークも可能</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shop & Showroom -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shopping-bag text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">物販・ショールーム</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-purple-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">プレミアムフード</h4>
+                                <p class="text-sm text-gray-600">高品質なドッグフードを展示・販売</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-purple-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">サプリメント</h4>
+                                <p class="text-sm text-gray-600">健康維持に役立つサプリメント</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-purple-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">AirBuggy等</h4>
+                                <p class="text-sm text-gray-600">人気ブランドの展示・販売</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Corner -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-camera text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">体験コーナー</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-orange-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">フォトスポット</h4>
+                                <p class="text-sm text-gray-600">デジタルサイネージ活用で素敵な写真を</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-orange-600 text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">レーザー刻印機</h4>
+                                <p class="text-sm text-gray-600">名入れグッズ製作でオリジナルアイテムを（1回500円・スタッフサポート付き）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section id="recommendations" class="py-20 bg-gradient-to-br from-pink-25 to-rose-25">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">こんな方におすすめです</h2>
+                <p class="text-xl text-gray-600">様々なライフスタイルに寄り添う施設</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-8"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- Recommendation 1 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-clock text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">日中は忙しい共働きの方へ</h3>
+                    <p class="text-sm text-gray-600">24時間営業なので、仕事終わりの夜間や、出勤前の早朝にサッと運動不足を解消できます。</p>
+                </div>
+                
+                <!-- Recommendation 2 -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-temperature-low text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">暑さ・寒さが苦手な愛犬へ</h3>
+                    <p class="text-sm text-gray-600">夏のアスファルトや冬の寒風を避け、適温の室内で安全に遊べます。</p>
+                </div>
+                
+                <!-- Recommendation 3 -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-green-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-laptop-house text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">在宅ワーク中の方へ</h3>
+                    <p class="text-sm text-gray-600">「家で犬が退屈して吠えてしまう」という時、ここに来れば愛犬は運動でき、飼い主様は集中して仕事ができます。</p>
+                </div>
+                
+                <!-- Recommendation 4 -->
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">シニア犬・人見知りのワンちゃんへ</h3>
+                    <p class="text-sm text-gray-600">屋外のような予測不能なトラブルが少なく、ゾーニングされた空間でマイペースに過ごせます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hygiene Section -->
+    <section id="hygiene" class="py-20 bg-gradient-to-br from-rose-25 to-pink-25">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">衛生管理へのこだわり</h2>
+                <p class="text-xl text-gray-600">Clean & Safe - 清潔で安全な環境を</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-8"></div>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="bg-white rounded-3xl p-8 md:p-12 shadow-lg">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">屋内だからこそ、徹底的にこだわりました</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-tshirt text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 mb-2">マナーウェア着用必須</h4>
+                                        <p class="text-gray-600 text-sm">排泄物の汚れや臭いを防ぎ、すべての利用者が気持ちよく過ごせる環境を保ちます。</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-spray-can text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 mb-2">徹底した清掃</h4>
+                                        <p class="text-gray-600 text-sm">次亜塩素酸などを用いた除菌清掃を定期的に実施しています。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 text-center">
+                            <div class="w-24 h-24 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
+                                <i class="fas fa-shield-alt text-5xl text-blue-600"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">安心・安全の証</h4>
+                            <p class="text-gray-600">プロフェッショナルな衛生管理で、ワンちゃんも飼い主様も安心してご利用いただけます</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-dog text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Zoomie Park</h3>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        奈良県上牧町初の24時間営業・日中スタッフ在中の屋内ドッグラン＆ラウンジ
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">施設概要</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#about" class="hover:text-white transition-colors">施設概要</a></li>
+                        <li><a href="#facility-features" class="hover:text-white transition-colors">施設機能</a></li>
+                        <li><a href="#hygiene" class="hover:text-white transition-colors">衛生管理</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">サービス</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>24時間営業</li>
+                        <li>日中スタッフ在中（9:00-20:00）</li>
+                        <li>夜間無人運営（20:00-翌8:00）</li>
+                        <li>会員制・予約制</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">お問い合わせ</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>奈良県北葛城郡上牧町</li>
+                        <li>24時間営業</li>
+                        <li>お電話・メールにて</li>
+                    </ul>
+                </div>
+            </div>
+            
+                    <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2025 Zoomie Park. All rights reserved. | 
+                    <a href="#" class="text-pink-400 hover:text-pink-300 transition-colors">プライバシーポリシー</a> | 
+                    <a href="#" class="text-pink-400 hover:text-pink-300 transition-colors">利用規約</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
